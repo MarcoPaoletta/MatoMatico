@@ -4,8 +4,8 @@
   * Cambiar color de los botones
   * Cambiar color del fondo
   * Cambiar color del borde
-  * Cambiar modo mezcla del borde (border_blend en la [documentacion](https://docs.godotengine.org/es/stable/classes/class_styleboxflat.html])
-  * Cambiar modo redondo (corner_detail) en la [documentacion](https://docs.godotengine.org/es/stable/classes/class_styleboxflat.html])
+  * Cambiar modo mezcla del borde (border_blend en la [documentacion](https://docs.godotengine.org/es/stable/classes/class_styleboxflat.html)
+  * Cambiar modo redondo (corner_detail) en la [documentacion](https://docs.godotengine.org/es/stable/classes/class_styleboxflat.html)
 * Toda esta informacion se guarda en un archivo de manera local
 ---
 # Descargar Godot Engine e importar el proyecto
