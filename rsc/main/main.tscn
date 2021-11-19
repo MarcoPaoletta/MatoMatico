@@ -1,0 +1,348 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://rsc/main/main.gd" type="Script" id=1]
+[ext_resource path="res://rsc/calculator_buttons/calculator_buttons.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/fonts/fuente.tres" type="DynamicFont" id=3]
+[ext_resource path="res://assets/imgs/settings.png" type="Texture" id=4]
+[ext_resource path="res://assets/fonts/Inter-VariableFont_slnt,wght.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://assets/imgs/close.png" type="Texture" id=6]
+[ext_resource path="res://rsc/background/background.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/style_box/blend_mode.tres" type="StyleBox" id=8]
+[ext_resource path="res://assets/style_box/circular_mode.tres" type="StyleBox" id=9]
+[ext_resource path="res://assets/imgs/delete_files.png" type="Texture" id=10]
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.168627, 0.0980392, 0.156863, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0.133333, 0.431373, 0.615686, 1 )
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 5 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.0392157, 0.329412, 0.294118, 1 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.0392157, 0.329412, 0.294118, 1 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.0392157, 0.329412, 0.294118, 1 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.0392157, 0.329412, 0.294118, 1 )
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.0392157, 0.329412, 0.294118, 1 )
+
+[node name="main" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="save_timer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[node name="background" parent="." instance=ExtResource( 7 )]
+
+[node name="Resultado" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 97.0
+margin_bottom = -500.0
+rect_min_size = Vector2( 400, 70 )
+rect_pivot_offset = Vector2( 200, 50 )
+custom_fonts/font = ExtResource( 3 )
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="calculator_buttons" parent="." instance=ExtResource( 2 )]
+
+[node name="settings_button" type="TextureButton" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -40.5
+margin_top = 16.0
+margin_right = 40.5
+margin_bottom = 97.0
+texture_normal = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="settings" type="Control" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -350.0
+margin_right = 200.0
+margin_bottom = 350.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="panel" type="Panel" parent="settings"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -168.0
+margin_top = -230.5
+margin_right = 168.0
+margin_bottom = 230.5
+custom_styles/panel = SubResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="close_button" type="TextureButton" parent="settings/panel"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -86.0
+margin_top = -86.0
+margin_right = -16.0
+margin_bottom = -16.0
+texture_normal = ExtResource( 6 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="delete_button" type="TextureButton" parent="settings/panel"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 16.0
+margin_top = -86.0
+margin_right = 86.0
+margin_bottom = -16.0
+texture_normal = ExtResource( 10 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="container" type="VBoxContainer" parent="settings/panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -144.0
+margin_top = -226.5
+margin_right = 144.0
+margin_bottom = 139.5
+custom_constants/separation = 40
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="buttons" type="Button" parent="settings/panel/container"]
+margin_top = 68.0
+margin_right = 288.0
+margin_bottom = 118.0
+rect_min_size = Vector2( 100, 50 )
+custom_fonts/font = SubResource( 2 )
+text = "BOTONES"
+
+[node name="background" type="Button" parent="settings/panel/container"]
+margin_top = 158.0
+margin_right = 288.0
+margin_bottom = 208.0
+rect_min_size = Vector2( 100, 50 )
+custom_fonts/font = SubResource( 3 )
+text = "FONDO"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="borders" type="Button" parent="settings/panel/container"]
+margin_top = 248.0
+margin_right = 288.0
+margin_bottom = 298.0
+rect_min_size = Vector2( 100, 50 )
+custom_fonts/font = SubResource( 3 )
+text = "BORDES"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="buttons_color_picker" type="ColorPicker" parent="settings/panel"]
+visible = false
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -160.0
+margin_top = -453.0
+margin_right = 176.0
+margin_bottom = 8.0
+edit_alpha = false
+presets_enabled = false
+presets_visible = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="close_color_picker" type="Button" parent="settings/panel/buttons_color_picker"]
+margin_top = 431.0
+margin_right = 336.0
+margin_bottom = 461.0
+rect_min_size = Vector2( 0, 30 )
+text = "CERRAR"
+
+[node name="background_color_picker" type="ColorPicker" parent="settings/panel"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -160.0
+margin_top = -222.5
+margin_right = 176.0
+margin_bottom = 238.5
+edit_alpha = false
+presets_enabled = false
+presets_visible = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="close_color_picker2" type="Button" parent="settings/panel/background_color_picker"]
+margin_top = 431.0
+margin_right = 336.0
+margin_bottom = 461.0
+rect_min_size = Vector2( 0, 30 )
+text = "CERRAR"
+
+[node name="borders_color_picker" type="ColorPicker" parent="settings/panel"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -160.0
+margin_top = -243.0
+margin_right = 176.0
+margin_bottom = 259.0
+edit_alpha = false
+presets_enabled = false
+presets_visible = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="close_color_picker3" type="Button" parent="settings/panel/borders_color_picker"]
+margin_top = 412.0
+margin_right = 336.0
+margin_bottom = 442.0
+rect_min_size = Vector2( 0, 30 )
+text = "CERRAR"
+
+[node name="blend_mode_button" type="CheckBox" parent="settings/panel/borders_color_picker"]
+margin_top = 442.0
+margin_right = 336.0
+margin_bottom = 472.0
+rect_min_size = Vector2( 0, 30 )
+custom_styles/hover = ExtResource( 9 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/focus = SubResource( 5 )
+custom_styles/disabled = SubResource( 6 )
+custom_styles/hover_pressed = SubResource( 7 )
+custom_styles/normal = SubResource( 8 )
+text = "MODO MEZCLA "
+
+[node name="circular_mode_button" type="CheckBox" parent="settings/panel/borders_color_picker"]
+margin_top = 472.0
+margin_right = 336.0
+margin_bottom = 502.0
+rect_min_size = Vector2( 0, 30 )
+custom_styles/hover = ExtResource( 8 )
+custom_styles/pressed = ExtResource( 8 )
+custom_styles/focus = ExtResource( 8 )
+custom_styles/disabled = ExtResource( 8 )
+custom_styles/hover_pressed = ExtResource( 8 )
+custom_styles/normal = ExtResource( 8 )
+text = "MODO REDONDO"
+
+[node name="h_box_container" type="HBoxContainer" parent="settings/panel"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="delete_confirmation" type="ConfirmationDialog" parent="settings"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -108.5
+margin_top = -54.5
+margin_right = 108.5
+margin_bottom = 54.5
+popup_exclusive = true
+window_title = "RESTAURAR"
+dialog_text = "Presionando \"OK\" restableceras los datos de la aplicacion y luego la aplicacion será cerrada"
+dialog_autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="timeout" from="save_timer" to="." method="_on_save_timer_timeout"]
+[connection signal="pressed" from="calculator_buttons/borrarTodo" to="." method="_on_borrarTodo_pressed"]
+[connection signal="pressed" from="calculator_buttons/borrar" to="." method="_on_borrar_pressed"]
+[connection signal="pressed" from="calculator_buttons/dividir" to="." method="_on_dividir_pressed"]
+[connection signal="pressed" from="calculator_buttons/multiplicar" to="." method="_on_multiplicar_pressed"]
+[connection signal="pressed" from="calculator_buttons/restar" to="." method="_on_restar_pressed"]
+[connection signal="pressed" from="calculator_buttons/sumar" to="." method="_on_sumar_pressed"]
+[connection signal="pressed" from="calculator_buttons/calcular" to="." method="_on_calcular_pressed"]
+[connection signal="pressed" from="calculator_buttons/7" to="." method="_on_7_pressed"]
+[connection signal="pressed" from="calculator_buttons/8" to="." method="_on_8_pressed"]
+[connection signal="pressed" from="calculator_buttons/9" to="." method="_on_9_pressed"]
+[connection signal="pressed" from="calculator_buttons/4" to="." method="_on_4_pressed"]
+[connection signal="pressed" from="calculator_buttons/5" to="." method="_on_5_pressed"]
+[connection signal="pressed" from="calculator_buttons/6" to="." method="_on_6_pressed"]
+[connection signal="pressed" from="calculator_buttons/1" to="." method="_on_1_pressed"]
+[connection signal="pressed" from="calculator_buttons/2" to="." method="_on_2_pressed"]
+[connection signal="pressed" from="calculator_buttons/3" to="." method="_on_3_pressed"]
+[connection signal="pressed" from="calculator_buttons/0" to="." method="_on_0_pressed"]
+[connection signal="pressed" from="calculator_buttons/punto" to="." method="_on_punto_pressed"]
+[connection signal="pressed" from="settings_button" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="settings/panel/close_button" to="." method="_on_close_button_pressed"]
+[connection signal="pressed" from="settings/panel/delete_button" to="." method="_on_delete_button_pressed"]
+[connection signal="pressed" from="settings/panel/container/buttons" to="." method="_on_buttons_pressed"]
+[connection signal="pressed" from="settings/panel/container/background" to="." method="_on_background_pressed"]
+[connection signal="pressed" from="settings/panel/container/borders" to="." method="_on_borders_pressed"]
+[connection signal="color_changed" from="settings/panel/buttons_color_picker" to="." method="_on_buttons_color_picker_color_changed"]
+[connection signal="pressed" from="settings/panel/buttons_color_picker/close_color_picker" to="." method="_on_close_color_picker_pressed"]
+[connection signal="color_changed" from="settings/panel/background_color_picker" to="." method="_on_background_color_picker_color_changed"]
+[connection signal="pressed" from="settings/panel/background_color_picker/close_color_picker2" to="." method="_on_close_color_picker_pressed"]
+[connection signal="color_changed" from="settings/panel/borders_color_picker" to="." method="_on_borders_color_picker_color_changed"]
+[connection signal="pressed" from="settings/panel/borders_color_picker/close_color_picker3" to="." method="_on_close_color_picker_pressed"]
+[connection signal="pressed" from="settings/panel/borders_color_picker/blend_mode_button" to="." method="_on_blend_mode_button_pressed"]
+[connection signal="pressed" from="settings/panel/borders_color_picker/circular_mode_button" to="." method="_on_circular_mode_button_pressed"]
+[connection signal="confirmed" from="settings/delete_confirmation" to="." method="_on_delete_confirmation_confirmed"]
+
+[editable path="background"]
+[editable path="calculator_buttons"]

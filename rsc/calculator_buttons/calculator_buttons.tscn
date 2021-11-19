@@ -1,0 +1,314 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/fonts/fuente.tres" type="DynamicFont" id=1]
+[ext_resource path="res://assets/style_box/calculator_buttons.tres" type="StyleBox" id=2]
+
+[node name="calculator_buttons" type="Control"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -700.0
+margin_right = 400.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="borrarTodo" type="Button" parent="."]
+margin_top = 200.0
+margin_right = 100.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 90, 90 )
+custom_fonts/font = ExtResource( 1 )
+custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 2 )
+custom_styles/focus = ExtResource( 2 )
+custom_styles/disabled = ExtResource( 2 )
+custom_styles/normal = ExtResource( 2 )
+text = "C"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="borrar" type="Button" parent="."]
+margin_left = 100.0
+margin_top = 200.0
+margin_right = 200.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 90, 90 )
+custom_fonts/font = ExtResource( 1 )
+custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 2 )
+custom_styles/focus = ExtResource( 2 )
+custom_styles/disabled = ExtResource( 2 )
+custom_styles/normal = ExtResource( 2 )
+text = "<"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="dividir" type="Button" parent="."]
+margin_left = 200.0
+margin_top = 200.0
+margin_right = 300.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 90, 90 )
+custom_fonts/font = ExtResource( 1 )
+custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 2 )
+custom_styles/focus = ExtResource( 2 )
+custom_styles/disabled = ExtResource( 2 )
+custom_styles/normal = ExtResource( 2 )
+text = "/"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="multiplicar" type="Button" parent="."]
+margin_left = 300.0
+margin_top = 200.0
+margin_right = 400.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 90, 90 )
+custom_fonts/font = ExtResource( 1 )
+custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 2 )
+custom_styles/focus = ExtResource( 2 )
+custom_styles/disabled = ExtResource( 2 )
+custom_styles/normal = ExtResource( 2 )
+text = "x"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="restar" type="Button" parent="."]
+margin_left = 300.0
+margin_top = 300.0
+margin_right = 400.0
+margin_bottom = 400.0
+rect_min_size = Vector2( 90, 90 )
+custom_fonts/font = ExtResource( 1 )
+custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 2 )
+custom_styles/focus = ExtResource( 2 )
+custom_styles/disabled = ExtResource( 2 )
+custom_styles/normal = ExtResource( 2 )
+text = "-"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sumar" type="Button" parent="."]
+margin_left = 300.0
+margin_top = 400.0
+margin_right = 400.0
+margin_bottom = 500.0
+rect_min_size = Vector2( 90, 90 )
+custom_fonts/font = ExtResource( 1 )
+custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 2 )
+custom_styles/focus = ExtResource( 2 )
+custom_styles/disabled = ExtResource( 2 )
+custom_styles/normal = ExtResource( 2 )
+text = "+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="calcular" type="Button" parent="."]
+margin_left = 300.0
+margin_top = 500.0
+margin_right = 400.0
+margin_bottom = 700.0
+rect_min_size = Vector2( 100, 200 )
+custom_fonts/font = ExtResource( 1 )
+custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 2 )
+custom_styles/focus = ExtResource( 2 )
+custom_styles/disabled = ExtResource( 2 )
+custom_styles/normal = ExtResource( 2 )
+text = "="
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="7" type="Button" parent="."]
+margin_top = 300.0
+margin_right = 100.0
+margin_bottom = 400.0
+rect_min_size = Vector2( 90, 90 )
+custom_fonts/font = ExtResource( 1 )
+custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 2 )
+custom_styles/focus = ExtResource( 2 )
+custom_styles/disabled = ExtResource( 2 )
+custom_styles/normal = ExtResource( 2 )
+text = "7"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="8" type="Button" parent="."]
+margin_left = 100.0
+margin_top = 300.0
+margin_right = 200.0
+margin_bottom = 400.0
+rect_min_size = Vector2( 90, 90 )
+custom_fonts/font = ExtResource( 1 )
+custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 2 )
+custom_styles/focus = ExtResource( 2 )
+custom_styles/disabled = ExtResource( 2 )
+custom_styles/normal = ExtResource( 2 )
+text = "8"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="9" type="Button" parent="."]
+margin_left = 200.0
+margin_top = 300.0
+margin_right = 300.0
+margin_bottom = 400.0
+rect_min_size = Vector2( 90, 90 )
+custom_fonts/font = ExtResource( 1 )
+custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 2 )
+custom_styles/focus = ExtResource( 2 )
+custom_styles/disabled = ExtResource( 2 )
+custom_styles/normal = ExtResource( 2 )
+text = "9"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="4" type="Button" parent="."]
+margin_top = 400.0
+margin_right = 100.0
+margin_bottom = 500.0
+rect_min_size = Vector2( 90, 90 )
+custom_fonts/font = ExtResource( 1 )
+custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 2 )
+custom_styles/focus = ExtResource( 2 )
+custom_styles/disabled = ExtResource( 2 )
+custom_styles/normal = ExtResource( 2 )
+text = "4"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="5" type="Button" parent="."]
+margin_left = 100.0
+margin_top = 400.0
+margin_right = 200.0
+margin_bottom = 500.0
+rect_min_size = Vector2( 90, 90 )
+custom_fonts/font = ExtResource( 1 )
+custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 2 )
+custom_styles/focus = ExtResource( 2 )
+custom_styles/disabled = ExtResource( 2 )
+custom_styles/normal = ExtResource( 2 )
+text = "5"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="6" type="Button" parent="."]
+margin_left = 200.0
+margin_top = 400.0
+margin_right = 300.0
+margin_bottom = 500.0
+rect_min_size = Vector2( 90, 90 )
+custom_fonts/font = ExtResource( 1 )
+custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 2 )
+custom_styles/focus = ExtResource( 2 )
+custom_styles/disabled = ExtResource( 2 )
+custom_styles/normal = ExtResource( 2 )
+text = "6"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="1" type="Button" parent="."]
+margin_top = 500.0
+margin_right = 100.0
+margin_bottom = 600.0
+rect_min_size = Vector2( 90, 90 )
+custom_fonts/font = ExtResource( 1 )
+custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 2 )
+custom_styles/focus = ExtResource( 2 )
+custom_styles/disabled = ExtResource( 2 )
+custom_styles/normal = ExtResource( 2 )
+text = "1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="2" type="Button" parent="."]
+margin_left = 100.0
+margin_top = 500.0
+margin_right = 200.0
+margin_bottom = 600.0
+rect_min_size = Vector2( 90, 90 )
+custom_fonts/font = ExtResource( 1 )
+custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 2 )
+custom_styles/focus = ExtResource( 2 )
+custom_styles/disabled = ExtResource( 2 )
+custom_styles/normal = ExtResource( 2 )
+text = "2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="3" type="Button" parent="."]
+margin_left = 200.0
+margin_top = 500.0
+margin_right = 300.0
+margin_bottom = 600.0
+rect_min_size = Vector2( 90, 90 )
+custom_fonts/font = ExtResource( 1 )
+custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 2 )
+custom_styles/focus = ExtResource( 2 )
+custom_styles/disabled = ExtResource( 2 )
+custom_styles/normal = ExtResource( 2 )
+text = "3"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="0" type="Button" parent="."]
+margin_top = 600.0
+margin_right = 200.0
+margin_bottom = 700.0
+rect_min_size = Vector2( 200, 100 )
+custom_fonts/font = ExtResource( 1 )
+custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 2 )
+custom_styles/focus = ExtResource( 2 )
+custom_styles/disabled = ExtResource( 2 )
+custom_styles/normal = ExtResource( 2 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="punto" type="Button" parent="."]
+margin_left = 200.0
+margin_top = 600.0
+margin_right = 300.0
+margin_bottom = 700.0
+rect_min_size = Vector2( 90, 90 )
+custom_fonts/font = ExtResource( 1 )
+custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 2 )
+custom_styles/focus = ExtResource( 2 )
+custom_styles/disabled = ExtResource( 2 )
+custom_styles/normal = ExtResource( 2 )
+text = "."
+__meta__ = {
+"_edit_use_anchors_": false
+}
